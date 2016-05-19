@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+		<title>Kevin's Calculator</title>
+		
+		<style>
+		@media (min-width: 640px){
+			/*DESKTOP*/
+			html {height:100%; width:100%; margin:0px; bottom:0px;}
+			body {background-color:black; height:100%; max-height:800px; width:50%; margin:auto; 
+			padding:0px; bottom:0px;}
+			.button {background-color: #cacacb; color:black; border:none; bottom:0px;
+			 text-align:center; text-decoration:none; float:left; font-weight:bold;
+			 display:block; font-size:32px; width:25%; height:20%; outline:none; margin:0px; padding:0px;
+			 border:solid 1px;}
+			.mathPush {background-color: #0db2ff; margin:0px;}
+			.button:hover {background-color:white;}
+			.mathPush:hover {background-color:#80d6ff;}
+			#keypad {display:block; width:100%; height:100%; margin:auto; bottom:0px;}
+			#results {background-color:black; color:white; font-weight:bold; font-size:32px;
+			text-align:left; width:100%; margin:auto; height:20%;}
+			#calculator {position:relative; width:100%; height:80%; margin:0px; left:0px; right:0px; bottom:0px;}
+			#screen_1 {text-align:left; font-size:62px; padding-top:20px; padding-left:10px; margin:auto; overflow-Y:hidden; overflow-X:hidden;
+			text-overflow:hidden;}
+			#zero {width:50%; text-align:left; text-indent:20%;}
+		}
+		@media (max-width:639px){
+			/*MOBILE*/
+			html {height:100%; width:100%; margin:0px; bottom:0px;}
+			body {background-color:black; height:100%; width:100%; max-width:320px; margin:0 auto; padding:0px; bottom:0px;}
+			.button {background-color: #cacacb; color:black; border:none; bottom:0px;
+			 text-align:center; text-decoration:none; float:left; font-weight:bold;
+			 display:block; font-size:32px; width:25%; height:20%; outline:none; margin:0px; padding:0px;
+			 border:solid 1px;}
+			.mathPush {background-color: #0db2ff; margin:0px;}
+			.button:hover {background-color:white;}
+			.mathPush:hover {background-color:#80d6ff;}
+			#keypad {display:block; width:100%; height:100%; margin:auto; bottom:0px;}
+			#results {background-color:black; color:white; font-weight:bold; font-size:32px;
+			text-align:left; width:100%; margin:auto; height:20%;}
+			#calculator {position:relative; width:100%; height:80%; margin:0px; left:0px; right:0px; bottom:0px;}
+			#screen_1 {text-align:left; margin:auto; font-size:62px; padding-top:20px; padding-left:10px; overflow-Y:hidden; overflow-X:hidden;
+			text-overflow:hidden;}
+			#zero {width:50%; text-align:left; text-indent:20%;}
+		}
+		</style>
+	</head>
+	<body>
+		<div id="calculator">
+		<div id="results">
+			<p id="screen_1"></p>
+		</div>
+		<div id="keypad">
+			<button id="clear" class="button">C</button>
+			<button id="inverse" class="button">+/-</button>
+			<button id="precent" class="button">%</button>
+			<button id="divide" class="button mathPush">/</button><br>
+			<button id="nine" class="button">9</button>
+			<button id="eight" class="button">8</button>
+			<button id="seven" class="button">7</button>
+			<button id="multiply" class="button mathPush">*</button><br>
+			<button id="six" class="button">6</button>
+			<button id="five" class="button">5</button>
+			<button id="four" class="button">4</button>
+			<button id="minus" class="button mathPush">-</button><br>
+			<button id="three" class="button">3</button>
+			<button id="two" class="button">2</button>
+			<button id="one" class="button">1</button>
+			<button id="plus" class="button mathPush">+</button><br>
+			<button id="zero" class="button">0</button>
+			<button id="dot" class="button">.</button>
+			<button id="equal" class="button mathPush">=</button>
+			
+		</div>
+		</div>
+		<script>
+	var firstArray = new Array;
+	var secondArray = new Array;
+	
+	var next = false;
+	
+	var plusBoolean = false;
+	var minusBoolean = false;
+	var multiBoolean = false;
+	var divideBoolean = false;
+	
+    var x = document.getElementById("screen_1");
+    
+    
+		document.getElementById("one").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("1");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("1");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("two").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("2");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("2");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("three").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("3");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("3");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("four").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("4");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("4");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("five").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("5");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("5");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("six").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("6");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("6");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("seven").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("7");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("7");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("eight").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("8");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("8");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("nine").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("9");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("9");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("zero").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push("0");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push("0");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("dot").addEventListener("click", function(){
+		if (next == false) {
+			firstArray.push(".");
+			x.innerHTML = firstArray.join("");
+		}
+		else if (next == true) {
+			secondArray.push(".");
+			x.innerHTML = secondArray.join("");
+		}
+})
+		document.getElementById("inverse").addEventListener("click", function(){
+		firstArray = [Number(firstArray.join("")) * (-1)];
+		x.innerHTML = firstArray.join("");
+})
+		document.getElementById("precent").addEventListener("click", function(){
+		firstArray = [Number(firstArray.join("")) / 100];
+		x.innerHTML = firstArray.join("");
+})
+
+		document.getElementById("plus").addEventListener("click", function(){
+		next = true;
+		plusBoolean = true;
+		minusBoolean = false;
+		multiBoolean = false;
+		divideBoolean = false;
+		x.innerHTML = "";
+})
+		document.getElementById("minus").addEventListener("click", function(){
+		next = true;
+		plusBoolean = false;
+		minusBoolean = true;
+		multiBoolean = false;
+		divideBoolean = false;
+		x.innerHTML = "";
+})
+		document.getElementById("multiply").addEventListener("click", function(){
+		next = true;
+		plusBoolean = false;
+		minusBoolean = false;
+		multiBoolean = true;
+		divideBoolean = false;
+		x.innerHTML = "";
+})
+		document.getElementById("divide").addEventListener("click", function(){
+		next = true;
+		plusBoolean = false;
+		minusBoolean = false;
+		multiBoolean = false;
+		divideBoolean = true;
+		x.innerHTML = "";
+})
+		document.getElementById("equal").addEventListener("click", function(){
+		if (plusBoolean == true) {
+			firstArray = [Number(firstArray.join("")) + Number(secondArray.join(""))];
+			x.innerHTML = firstArray[0];
+			secondArray = [];
+			console.log(firstArray[0]);
+		}
+		else if (minusBoolean == true) {
+			firstArray = [Number(firstArray.join("")) - Number(secondArray.join(""))];
+			x.innerHTML = firstArray[0];
+			secondArray = [];
+			console.log(firstArray[0]);
+		}
+		else if (multiBoolean == true) {
+			firstArray = [Number(firstArray.join("")) * Number(secondArray.join(""))];
+			x.innerHTML = firstArray[0];
+			secondArray = [];
+			console.log(firstArray[0]);
+		}
+		else if (divideBoolean == true) {
+			firstArray = [Number(firstArray.join("")) / Number(secondArray.join(""))];
+			x.innerHTML = firstArray[0];
+			secondArray = [];
+			console.log(firstArray[0]);
+		}
+})
+		document.getElementById("clear").addEventListener("click", function(){
+		firstArray = [];
+		secondArray = [];
+		
+		next = false;
+		plusBoolean = false;
+		minusBoolean = false;
+		multiBoolean = false;
+		divideBoolean = false;
+		x.innerHTML = "";
+})
+		</script>
+
+	</body>
+</html>
