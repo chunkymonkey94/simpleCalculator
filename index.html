@@ -10,7 +10,7 @@
 			html {height:100%; width:100%; margin:0px; bottom:0px;}
 			body {background-color:black; height:100%; max-height:800px; width:50%; margin:auto; 
 			padding:0px; bottom:0px;}
-			.button {background-color: #cacacb; color:black; border:none; bottom:0px;
+			.button {background-color: #cacacb; color:black; bottom:0px;
 			 text-align:center; text-decoration:none; float:left; font-weight:bold;
 			 display:block; font-size:32px; width:25%; height:20%; outline:none; margin:0px; padding:0px;
 			 border:solid 1px;}
@@ -199,12 +199,23 @@
 		}
 })
 		document.getElementById("inverse").addEventListener("click", function(){
-		firstArray = [Number(firstArray.join("")) * (-1)];
-		x.innerHTML = firstArray.join("");
+		if (next == false) {
+		        firstArray = [Number(firstArray.join("")) * (-1)];
+	                x.innerHTML = firstArray.join("");
+		}
+		if else (next == true) {
+			secondArray = [Number(secondArray.join("")) * (-1)];
+			x.innerHTML = secondArray.join("");
+		}
 })
 		document.getElementById("precent").addEventListener("click", function(){
-		firstArray = [Number(firstArray.join("")) / 100];
-		x.innerHTML = firstArray.join("");
+		if (next == false) {
+		        firstArray = [Number(firstArray.join("")) / 100];
+		        x.innerHTML = firstArray.join("");
+		}
+		if else (next == true) {
+			secondArray = [Number(secondArray.join("")) / 100];
+		}
 })
 
 		document.getElementById("plus").addEventListener("click", function(){
