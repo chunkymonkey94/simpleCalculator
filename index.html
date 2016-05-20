@@ -53,17 +53,17 @@
 		</div>
 		<div id="keypad">
 			<button id="clear" class="button">C</button>
-			<button id="inverse" class="button">+/-</button>
+			<button id="inverse" class="button">±</button>
 			<button id="precent" class="button">%</button>
-			<button id="divide" class="button mathPush">/</button><br>
+			<button id="divide" class="button mathPush">÷</button><br>
 			<button id="nine" class="button">9</button>
 			<button id="eight" class="button">8</button>
 			<button id="seven" class="button">7</button>
-			<button id="multiply" class="button mathPush">*</button><br>
+			<button id="multiply" class="button mathPush">×</button><br>
 			<button id="six" class="button">6</button>
 			<button id="five" class="button">5</button>
 			<button id="four" class="button">4</button>
-			<button id="minus" class="button mathPush">-</button><br>
+			<button id="minus" class="button mathPush">−</button><br>
 			<button id="three" class="button">3</button>
 			<button id="two" class="button">2</button>
 			<button id="one" class="button">1</button>
@@ -225,7 +225,7 @@
 		minusBoolean = false;
 		multiBoolean = false;
 		divideBoolean = false;
-		x.innerHTML = "";
+		x.innerHTML = "+";
 })
 		document.getElementById("minus").addEventListener("click", function(){
 		next = true;
@@ -233,7 +233,7 @@
 		minusBoolean = true;
 		multiBoolean = false;
 		divideBoolean = false;
-		x.innerHTML = "";
+		x.innerHTML = "−";
 })
 		document.getElementById("multiply").addEventListener("click", function(){
 		next = true;
@@ -241,7 +241,7 @@
 		minusBoolean = false;
 		multiBoolean = true;
 		divideBoolean = false;
-		x.innerHTML = "";
+		x.innerHTML = "×";
 })
 		document.getElementById("divide").addEventListener("click", function(){
 		next = true;
@@ -249,7 +249,7 @@
 		minusBoolean = false;
 		multiBoolean = false;
 		divideBoolean = true;
-		x.innerHTML = "";
+		x.innerHTML = "÷";
 })
 		document.getElementById("equal").addEventListener("click", function(){
 		if (plusBoolean == true) {
