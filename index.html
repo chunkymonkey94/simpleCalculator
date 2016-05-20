@@ -256,24 +256,28 @@
 			firstArray = [Number(firstArray.join("")) + Number(secondArray.join(""))];
 			x.innerHTML = firstArray[0];
 			secondArray = [];
+			next = false;
 			console.log(firstArray[0]);
 		}
 		else if (minusBoolean == true) {
 			firstArray = [Number(firstArray.join("")) - Number(secondArray.join(""))];
 			x.innerHTML = firstArray[0];
 			secondArray = [];
+			next = false;
 			console.log(firstArray[0]);
 		}
 		else if (multiBoolean == true) {
 			firstArray = [Number(firstArray.join("")) * Number(secondArray.join(""))];
 			x.innerHTML = firstArray[0];
 			secondArray = [];
+			next = false;
 			console.log(firstArray[0]);
 		}
 		else if (divideBoolean == true) {
 			firstArray = [Number(firstArray.join("")) / Number(secondArray.join(""))];
 			x.innerHTML = firstArray[0];
 			secondArray = [];
+			next = false;
 			console.log(firstArray[0]);
 		}
 })
