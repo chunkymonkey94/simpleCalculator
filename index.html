@@ -93,6 +93,30 @@
     		document.getElementById("multiply").style.border = "solid black 1px";
     		document.getElementById("divide").style.border = "solid black 1px";
     	}
+    	if else (minusBoolean == true) {
+    		document.getElementById("plus").style.border = "solid black 1px";
+    		document.getElementById("minus").style.border = "solid white 2px";
+    		document.getElementById("multiply").style.border = "solid black 1px";
+    		document.getElementById("divide").style.border = "solid black 1px";
+    	}
+    	if else (multiBoolean == true) {
+    		document.getElementById("plus").style.border = "solid black 1px";
+    		document.getElementById("minus").style.border = "solid black 1px";
+    		document.getElementById("multiply").style.border = "solid white 2px";
+    		document.getElementById("divide").style.border = "solid black 1px";
+    	}
+    	if else (divideBoolean == true) {
+    		document.getElementById("plus").style.border = "solid black 1px";
+    		document.getElementById("minus").style.border = "solid black 1px";
+    		document.getElementById("multiply").style.border = "solid black 1px";
+    		document.getElementById("divide").style.border = "solid white 2px";
+    	}
+    	else {
+    		document.getElementById("plus").style.border = "solid black 1px";
+    		document.getElementById("minus").style.border = "solid black 1px";
+    		document.getElementById("multiply").style.border = "solid black 1px";
+    		document.getElementById("divide").style.border = "solid black 1px";
+    	}
     }
     
     
@@ -234,6 +258,7 @@
 		multiBoolean = false;
 		divideBoolean = false;
 		x.innerHTML = "+";
+		update();
 })
 		document.getElementById("minus").addEventListener("click", function(){
 		next = true;
@@ -242,6 +267,7 @@
 		multiBoolean = false;
 		divideBoolean = false;
 		x.innerHTML = "−";
+		update();
 })
 		document.getElementById("multiply").addEventListener("click", function(){
 		next = true;
@@ -250,6 +276,7 @@
 		multiBoolean = true;
 		divideBoolean = false;
 		x.innerHTML = "×";
+		update();
 })
 		document.getElementById("divide").addEventListener("click", function(){
 		next = true;
@@ -258,6 +285,7 @@
 		multiBoolean = false;
 		divideBoolean = true;
 		x.innerHTML = "÷";
+		update();
 })
 		document.getElementById("equal").addEventListener("click", function(){
 		if (plusBoolean == true) {
@@ -265,6 +293,7 @@
 			x.innerHTML = firstArray[0];
 			secondArray = [];
 			next = false;
+			update();
 			console.log(firstArray[0]);
 		}
 		else if (minusBoolean == true) {
@@ -272,6 +301,7 @@
 			x.innerHTML = firstArray[0];
 			secondArray = [];
 			next = false;
+			update();
 			console.log(firstArray[0]);
 		}
 		else if (multiBoolean == true) {
@@ -279,6 +309,7 @@
 			x.innerHTML = firstArray[0];
 			secondArray = [];
 			next = false;
+			update();
 			console.log(firstArray[0]);
 		}
 		else if (divideBoolean == true) {
@@ -286,12 +317,15 @@
 			x.innerHTML = firstArray[0];
 			secondArray = [];
 			next = false;
+			update();
 			console.log(firstArray[0]);
 		}
 })
 		document.getElementById("clear").addEventListener("click", function(){
 		firstArray = [];
 		secondArray = [];
+		
+		update();
 		
 		next = false;
 		plusBoolean = false;
