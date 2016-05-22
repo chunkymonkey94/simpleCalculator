@@ -86,6 +86,14 @@
 	var divideBoolean = false;
 	
     var x = document.getElementById("screen_1");
+    function update() {
+    	if (plusBoolean == true) {
+    		document.getElementById("plus").style.border = "solid white 2px";
+    		document.getElementById("minus").style.border = "solid black 1px";
+    		document.getElementById("multiply").style.border = "solid black 1px";
+    		document.getElementById("divide").style.border = "solid black 1px";
+    	}
+    }
     
     
 		document.getElementById("one").addEventListener("click", function(){
@@ -226,12 +234,6 @@
 		multiBoolean = false;
 		divideBoolean = false;
 		x.innerHTML = "+";
-                if (plusBoolean == true) {
-                   document.getElementById("plus").style.border = "solid gray 2px";
-}
-                else {
-                   document.getElementById("plus").style.border = "solid black 1px";
-}
 })
 		document.getElementById("minus").addEventListener("click", function(){
 		next = true;
