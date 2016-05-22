@@ -88,28 +88,28 @@
     var x = document.getElementById("screen_1");
     function update() {
     	if (plusBoolean == true) {
-    		document.getElementById("plus").style.border = "solid white 2px";
+    		document.getElementById("plus").style.border = "solid white 4px";
     		document.getElementById("minus").style.border = "solid black 1px";
     		document.getElementById("multiply").style.border = "solid black 1px";
     		document.getElementById("divide").style.border = "solid black 1px";
     	}
     	else if (minusBoolean == true) {
     		document.getElementById("plus").style.border = "solid black 1px";
-    		document.getElementById("minus").style.border = "solid white 2px";
+    		document.getElementById("minus").style.border = "solid white 4px";
     		document.getElementById("multiply").style.border = "solid black 1px";
     		document.getElementById("divide").style.border = "solid black 1px";
     	}
     	else if (multiBoolean == true) {
     		document.getElementById("plus").style.border = "solid black 1px";
     		document.getElementById("minus").style.border = "solid black 1px";
-    		document.getElementById("multiply").style.border = "solid white 2px";
+    		document.getElementById("multiply").style.border = "solid white 4px";
     		document.getElementById("divide").style.border = "solid black 1px";
     	}
     	else if (divideBoolean == true) {
     		document.getElementById("plus").style.border = "solid black 1px";
     		document.getElementById("minus").style.border = "solid black 1px";
     		document.getElementById("multiply").style.border = "solid black 1px";
-    		document.getElementById("divide").style.border = "solid white 2px";
+    		document.getElementById("divide").style.border = "solid white 4px";
     	}
     	else {
     		document.getElementById("plus").style.border = "solid black 1px";
@@ -257,7 +257,6 @@
 		minusBoolean = false;
 		multiBoolean = false;
 		divideBoolean = false;
-		x.innerHTML = "+";
 		update();
 })
 		document.getElementById("minus").addEventListener("click", function(){
@@ -266,7 +265,6 @@
 		minusBoolean = true;
 		multiBoolean = false;
 		divideBoolean = false;
-		x.innerHTML = "−";
 		update();
 })
 		document.getElementById("multiply").addEventListener("click", function(){
@@ -275,7 +273,6 @@
 		minusBoolean = false;
 		multiBoolean = true;
 		divideBoolean = false;
-		x.innerHTML = "×";
 		update();
 })
 		document.getElementById("divide").addEventListener("click", function(){
@@ -284,7 +281,6 @@
 		minusBoolean = false;
 		multiBoolean = false;
 		divideBoolean = true;
-		x.innerHTML = "÷";
 		update();
 })
 		document.getElementById("equal").addEventListener("click", function(){
